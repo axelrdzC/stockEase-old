@@ -13,7 +13,10 @@
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
-                <div class="input-group mb-3">
+                <div class="input-group mb-3"><span class="input-group-text">
+                    <svg class="icon">
+                      <use xlink:href="{{ asset('icons/coreui.svg#cil-user') }}"></use>
+                    </svg></span>
                     <input class="form-control" type="text" name="first_name" placeholder="{{ __('First name') }}" required
                            autocomplete="first_name" autofocus>
                     @error('first_name')
@@ -23,7 +26,10 @@
                     @enderror
                 </div>
 
-                <div class="input-group mb-3">
+                <div class="input-group mb-3"><span class="input-group-text">
+                    <svg class="icon">
+                      <use xlink:href="{{ asset('icons/coreui.svg#cil-user') }}"></use>
+                    </svg></span>
                     <input class="form-control" type="text" name="last_name" placeholder="{{ __('Last name') }}" required
                            autocomplete="last_name">
                     @error('last_name')
@@ -33,7 +39,10 @@
                     @enderror
                 </div>
 
-                <div class="input-group mb-3">
+                <div class="input-group mb-3"><span class="input-group-text">
+                    <svg class="icon">
+                      <use xlink:href="{{ asset('icons/coreui.svg#cil-envelope-open') }}"></use>
+                    </svg></span>
                     <input class="form-control" type="text" name="email" placeholder="{{ __('Email') }}" required
                            autocomplete="email">
                     @error('email')
@@ -43,7 +52,10 @@
                     @enderror
                 </div>
 
-                <div class="input-group mb-3">
+                <div class="input-group mb-3"><span class="input-group-text">
+                    <svg class="icon">
+                      <use xlink:href="{{ asset('icons/coreui.svg#cil-lock-locked') }}"></use>
+                    </svg></span>
                     <input class="form-control @error('password') is-invalid @enderror" type="password"
                            name="password" placeholder="{{ __('Password') }}" required autocomplete="new-password">
                     @error('password')
@@ -53,7 +65,10 @@
                     @enderror
                 </div>
 
-                <div class="input-group mb-4">
+                <div class="input-group mb-4"><span class="input-group-text">
+                    <svg class="icon">
+                      <use xlink:href="{{ asset('icons/coreui.svg#cil-lock-locked') }}"></use>
+                    </svg></span>
                     <input class="form-control @error('password_confirmation') is-invalid @enderror" type="password"
                            name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required
                            autocomplete="new-password">
@@ -71,7 +86,7 @@
 
         <!-- Columna de la imagen -->
         <div class="col-lg-7 col-md-2 d-flex justify-content-center align-items-center">
-            <img src="{{ asset('img/registro-guy.png') }}" alt="Register illustration" class="img-fluid" style="max-width: 80%; height: auto;">
+            <img src="{{ asset('img/register-illustration.png') }}" alt="Register illustration" class="img-fluid" style="max-width: 100%; height: auto;">
         </div>
     </div>
 </div>
