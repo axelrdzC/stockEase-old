@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <base href="./">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,18 +21,6 @@
 </head>
 
 <body>
-    <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-        <div class="sidebar-brand d-none d-md-flex">
-            <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
-                <use xlink:href="{{ asset('icons/brand.svg#full') }}"></use>
-            </svg>
-            <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
-                <use xlink:href="{{ asset('icons/brand.svg#signet') }}"></use>
-            </svg>
-        </div>
-        @include('layouts.navigation')
-        <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
-    </div>
     <div class="wrapper d-flex flex-column min-vh-100 bg-light">
         <!-- Header block -->
         @include('layouts.includes.header')
@@ -45,10 +34,6 @@
                 <div class="mb-4">@yield('content')</div>
             </div>
         </div>
-
-        <!-- Footer block -->
-        @include('layouts.includes.footer')
-        <!-- / Footer block -->
     </div>
 
     <!-- Scripts -->

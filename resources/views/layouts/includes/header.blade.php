@@ -1,28 +1,38 @@
 <header class="header header-sticky mb-4">
     <div class="container-fluid">
-        <button class="header-toggler px-md-0 me-md-3" type="button"
-            onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
-            <svg class="icon icon-lg">
-                <use xlink:href="{{ asset('icons/coreui.svg#cil-menu') }}"></use>
-            </svg>
-        </button>
-        <a class="header-brand d-md-none" href="#">
-            <svg width="118" height="46" alt="CoreUI Logo">
-                <use xlink:href="{{ asset('icons/brand.svg#full') }}"></use>
-            </svg>
-        </a>
-        <ul class="header-nav ms-auto">
 
+        <h3>STOCK EASE.</h3>
+
+        <ul class="header-nav d-flex justify-content-center flex-grow-1">
+            @include('layouts.navigation')
+        </ul>
+
+        <ul class="header-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('dashboard') }}">
+                <svg width="24" height="24" class="nav-icon me-2">
+                    <path d="M17.2265 10.5159C16.4531 9.61271 16.1016 8.82998 16.1016 7.50021V7.04807C16.1016 5.3152 15.7028 4.1987 14.8357 3.0822C13.4992 1.34827 11.2493 0.303223 9.04683 0.303223H8.95317C6.79696 0.303223 4.6176 1.30029 3.258 2.96384C2.34353 4.10273 1.89839 5.26721 1.89839 7.04807V7.50021C1.89839 8.82998 1.57007 9.61271 0.773458 10.5159C0.187314 11.1813 0 12.0366 0 12.9622C0 13.8889 0.304122 14.7665 0.914469 15.4799C1.71108 16.3352 2.83601 16.8811 3.98515 16.976C5.64887 17.1659 7.3126 17.2373 9.00053 17.2373C10.6874 17.2373 12.3511 17.1179 14.0159 16.976C15.164 16.8811 16.2889 16.3352 17.0855 15.4799C17.6948 14.7665 18 13.8889 18 12.9622C18 12.0366 17.8127 11.1813 17.2265 10.5159Z" fill="#5C5C5C"/>
+                    <path opacity="0.4" d="M11.1269 18.7621C10.5976 18.649 7.37221 18.649 6.84289 18.7621C6.39039 18.8666 5.90106 19.1097 5.90106 19.6429C5.92737 20.1516 6.22518 20.6005 6.63769 20.8852L6.63664 20.8863C7.17016 21.3022 7.7963 21.5667 8.45189 21.6616C8.80127 21.7096 9.15695 21.7074 9.51895 21.6616C10.1735 21.5667 10.7996 21.3022 11.3332 20.8863L11.3321 20.8852C11.7446 20.6005 12.0424 20.1516 12.0687 19.6429C12.0687 19.1097 11.5794 18.8666 11.1269 18.7621Z" fill="#5C5C5C"/>
+                    </svg>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('dashboard') }}">
+                <svg width="24" height="24" class="nav-icon me-2">
+                    <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M20.8066 7.62358L20.1842 6.54349C19.6576 5.62957 18.4907 5.31429 17.5755 5.83869V5.83869C17.1399 6.09531 16.6201 6.16812 16.1307 6.04106C15.6413 5.91399 15.2226 5.59749 14.9668 5.16134C14.8023 4.88412 14.7139 4.56836 14.7105 4.24601V4.24601C14.7254 3.72919 14.5304 3.22837 14.17 2.85764C13.8096 2.48691 13.3145 2.27783 12.7975 2.27805H11.5435C11.0369 2.27804 10.5513 2.47988 10.194 2.83891C9.83666 3.19795 9.63714 3.68456 9.63958 4.19109V4.19109C9.62457 5.23689 8.77245 6.07678 7.72654 6.07667C7.40418 6.07332 7.08843 5.98491 6.8112 5.82038V5.82038C5.89603 5.29598 4.72908 5.61126 4.20251 6.52519L3.53432 7.62358C3.00838 8.53636 3.31937 9.70258 4.22997 10.2323V10.2323C4.82187 10.574 5.1865 11.2056 5.1865 11.889C5.1865 12.5725 4.82187 13.204 4.22997 13.5458V13.5458C3.32053 14.0719 3.0092 15.2353 3.53432 16.1453V16.1453L4.16589 17.2346C4.41262 17.6798 4.82657 18.0083 5.31616 18.1474C5.80575 18.2866 6.33061 18.2249 6.77459 17.976V17.976C7.21105 17.7213 7.73116 17.6515 8.21931 17.7822C8.70746 17.9128 9.12321 18.233 9.37413 18.6716C9.53867 18.9489 9.62708 19.2646 9.63043 19.587V19.587C9.63043 20.6435 10.4869 21.5 11.5435 21.5H12.7975C13.8505 21.5 14.7055 20.6491 14.7105 19.5961V19.5961C14.7081 19.088 14.9088 18.6 15.2681 18.2407C15.6274 17.8814 16.1154 17.6806 16.6236 17.6831C16.9451 17.6917 17.2596 17.7797 17.5389 17.9394V17.9394C18.4517 18.4653 19.6179 18.1543 20.1476 17.2437V17.2437L20.8066 16.1453C21.0617 15.7075 21.1317 15.186 21.0012 14.6963C20.8706 14.2067 20.5502 13.7893 20.111 13.5366V13.5366C19.6717 13.2839 19.3514 12.8665 19.2208 12.3769C19.0902 11.8873 19.1602 11.3658 19.4153 10.9279C19.5812 10.6383 19.8213 10.3982 20.111 10.2323V10.2323C21.0161 9.70286 21.3264 8.54346 20.8066 7.63274V7.63274V7.62358Z" stroke="#53545C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12.175" cy="11.889" r="2.63616" fill="none" stroke="#53545C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </a>
+            </li>
         </ul>
         @auth
-        <ul class="header-nav ms-3">
+        <ul class="header-nav ms-3 bg-light p-2 rounded">
             <li class="nav-item dropdown">
-                <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                    aria-expanded="false">
-                    <div class="avatar">
-                        <img class="avatar-img" src="{{ asset('img/default-avatar.jpg') }}"
-                            alt="{{ Auth::user()-> email }}">
+                <a class="nav-link d-flex align-items-center py-0 gap-2" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <div class="avatar me-2">
+                        <img class="avatar-img" src="{{ asset('img/default-avatar.jpg') }}" alt="{{ Auth::user()->email }}">
                     </div>
+                    <span class="user-name">{{ Auth::user()->name }}</span> <!-- Nombre del usuario -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-end pt-0">
                     <a class="dropdown-item" href="{{ route('users.show', Auth::user()->id) }}">
@@ -33,8 +43,7 @@
                     </a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault(); this.closest('form').submit();">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
                             <svg class="icon me-2">
                                 <use xlink:href="{{ asset('icons/coreui.svg#cil-account-logout') }}"></use>
                             </svg>
@@ -44,16 +53,7 @@
                 </div>
             </li>
         </ul>
+
         @endauth
-        @if (trim($__env->yieldContent('breadcrumbs')))
-        <div class="header-divider"></div>
-        <div class="container-fluid">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb my-0 ms-2">
-                    @yield('breadcrumbs')
-                </ol>
-            </nav>
-        </div>
-        @endif
     </div>
 </header>
