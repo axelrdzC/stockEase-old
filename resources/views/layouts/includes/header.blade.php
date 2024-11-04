@@ -1,7 +1,7 @@
 <header class="header header-sticky mb-4">
     <div class="container-fluid">
 
-        <h3>STOCK EASE.</h3>
+        <h3 class="fs-5">STOCK EASE.</h3>
 
         <ul class="header-nav d-flex justify-content-center flex-grow-1">
             @include('layouts.navigation')
@@ -26,7 +26,7 @@
             </li>
         </ul>
         @auth
-        <ul class="header-nav ms-3 bg-light p-2 rounded">
+        <ul class="header-nav bg-light p-2 rounded">
             <li class="nav-item dropdown">
                 <a class="nav-link d-flex align-items-center py-0 gap-2" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <div class="avatar me-2">
@@ -34,12 +34,12 @@
                     </div>
                     <span class="user-name">{{ Auth::user()->name }}</span> <!-- Nombre del usuario -->
                 </a>
-                <div class="dropdown-menu dropdown-menu-end pt-0">
+                <div class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="{{ route('users.show', Auth::user()->id) }}">
                         <svg class="icon me-2">
                             <use xlink:href="{{ asset('icons/coreui.svg#cil-user') }}"></use>
                         </svg>
-                        {{ __('My profile') }}
+                        {{ __('Ver perfil') }}
                     </a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -47,7 +47,7 @@
                             <svg class="icon me-2">
                                 <use xlink:href="{{ asset('icons/coreui.svg#cil-account-logout') }}"></use>
                             </svg>
-                            {{ __('Logout') }}
+                            {{ __('Cerrar sesion') }}
                         </a>
                     </form>
                 </div>

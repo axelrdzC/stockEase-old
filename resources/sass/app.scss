@@ -21,3 +21,41 @@ h3 {
     margin: 0;
     font-weight: bold;
 }
+
+.btn-primary {
+    background-color: #8067B2;
+    border-color: #8067B2;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    border-color: #8067B2;
+    color: #8067B2;
+}
+
+.btn-primary.active {
+    background-color: transparent;
+    border-color: #8067B2;
+    color: #8067B2;
+}
+
+.btn-outline-primary {
+    color: #8067B2;
+    background: transparent;
+    border-color: #8067B2;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color: #8067B2;
+    border-color: #8067B2;
+}
+
+.link-primary {
+    font-weight: bold;
+    color: #8067B2;
+}
+
+.nav-item .nav-link.active .nav-icon path {
+    stroke: #ffffff; /* Cambia este color al que prefieras */
+}

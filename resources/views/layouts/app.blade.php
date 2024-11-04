@@ -26,7 +26,7 @@
         @include('layouts.includes.header')
         <!-- / Header block -->
 
-        <div class="body flex-grow-1 px-3">
+        <div class="body flex-grow-1">
             <div class="container-lg">
                 <!-- Errors block -->
                 @include('layouts.includes.errors')
