@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
-@section('title', 'Productos') 
+@section('title', 'Clientes') 
 
 @section('content')
 <div class="row align-items-center pb-3">
     <div class="col-sm-3 col-lg-3">
-        <div class="fs-2 fw-semibold">Productos</div>
+        <div class="fs-2 fw-semibold">Clientes</div>
     </div>
     <!-- /.col-->
     <div class="col-6 ms-auto">
         <div class="d-flex align-items-center">
             <div class="input-group me-3">
-                <input class="form-control border-secondary p-1 px-2 bg-white" type="search" placeholder="Busca un producto" aria-label="Search">
+                <input class="form-control border-secondary p-1 px-2 bg-white" type="search" placeholder="Busca un cliente" aria-label="Search">
                 <button class="btn border border-secondary p-1 px-2 bg-white" type="button">
                     <i class="bi bi-search"></i>
                 </button>
             </div>
-            <button type="button" onclick="window.location.href='{{ route('productos.create') }}'" class="btn btn-primary text-nowrap p-1 px-2 fw-medium">Agregar producto +</button>
+            <button type="button" onclick="window.location.href='{{ route('clientes.create') }}'" class="btn btn-primary text-nowrap p-1 px-2 fw-medium">Agregar cliente +</button>
         </div>
     </div>
     <!-- /.col-->
@@ -40,39 +40,15 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="filterCategory" class="form-label fs-6">CATEGORIA</label>
+                    <label for="filterCategory" class="form-label fs-6">TIPO</label>
                     <select id="filterCategory" class="form-select">
                         <option selected>Seleccionar</option>
-                        <option value="1">TODOS</option>
-                        <option value="2">VINILOS</option>
-                        <option value="2">GALLETAS</option>
-                        <option value="2">ROPA</option>
+                        <option value="1">MAYORISTA</option>
+                        <option value="2">MINORISTA</option>
+                        <option value="2">EMPRESA</option>
                     </select>
                 </div>
 
-                <div class="mb-3">
-                    <label for="filterPrice" class="form-label">PRECIO</label>
-                    <select id="filterPrice" class="form-select">
-                        <option selected>Seleccionar</option>
-                        <option value="1">$0 - $50</option>
-                        <option value="2">$50 - $100</option>
-                        <option value="3">$100 - $200</option>
-                    </select>
-                </div>
-
-                <!-- Filtro por Stock -->
-                <div class="mb-3">
-                    <label for="filterStock" class="form-label">ESTADO DE STOCK</label>
-                    <select id="filterStock" class="form-select">
-                        <option selected>Seleccionar</option>
-                        <option value="1">ALTO</option>
-                        <option value="1">NORMAL</option>
-                        <option value="1">BAJO</option>
-                        <option value="2">AGOTADO</option>
-                    </select>
-                </div>
-
-                
                 <button type="button" class="btn btn-primary text-nowrap p-1 px-2 fw-medium w-100 mt-2">Restablecer filtros</button>
 
             </div>
@@ -91,7 +67,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($productos as $producto)
+                    @foreach ($clientes as $cliente)
                         <tr>
                             <th scope="row">{{ $producto->id }}</th>
                             <td>{{ $producto->nombre }}</td>

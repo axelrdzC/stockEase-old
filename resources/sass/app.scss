@@ -59,3 +59,12 @@ h3 {
 .nav-item .nav-link.active .nav-icon path {
     stroke: #ffffff; /* Cambia este color al que prefieras */
 }
+
+.enlace {
+    color: #8067B2; /* Cambia el color del enlace */
+    text-decoration: none;
+}
+
+.enlace:hover {
+    color: #a9a9a9;
+}

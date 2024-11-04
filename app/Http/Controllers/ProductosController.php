@@ -18,6 +18,18 @@ class ProductosController extends Controller
         return view('productos.create');
     }
 
+    public function createMonetaria(Request $request)
+    {
+        // Aquí puedes validar y guardar los datos de la vista anterior
+        return view('productos.create_monetaria');
+    }
+
+    public function createUbicacion(Request $request)
+    {
+        // Aquí puedes validar y guardar los datos de la vista anterior
+        return view('productos.create_ubicacion');
+    }
+    
 }
 
 

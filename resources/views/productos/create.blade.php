@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-8">
                 <!-- Formulario centrado -->
-                <form method="POST" style="background-color: #f8f9fa;" class="shadow-lg p-4 rounded" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('productos.create.monetaria') }}" style="background-color: #f8f9fa;" class="shadow-lg p-4 rounded" enctype="multipart/form-data">
                     @csrf
                     <!-- Nombre del producto -->
                     <div class="mb-3">
