@@ -1,4 +1,4 @@
-<header class="header header-sticky mb-4">
+<header class="header header-sticky mb-4 p-2">
     <div class="container-fluid">
 
         <h3 class="fs-5">STOCK EASE.</h3>

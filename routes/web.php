@@ -36,6 +36,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
         Route::get('/productos', [App\Http\Controllers\ProductosController::class, 'index'])->name('productos.index');
+        Route::get('/productos/create', [App\Http\Controllers\ProductosController::class, 'create'])->name('productos.create');
         /**
          * Role Routes
          */    

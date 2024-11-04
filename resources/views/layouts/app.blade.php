@@ -3,6 +3,7 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <base href="./">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

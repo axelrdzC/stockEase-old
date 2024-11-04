@@ -12,6 +12,12 @@ class ProductosController extends Controller
         $productos = Producto::latest()->paginate(10);
         return view('productos.index', compact('productos'));
     }
+
+    public function create()
+    {
+        return view('productos.create');
+    }
+
 }
 
 

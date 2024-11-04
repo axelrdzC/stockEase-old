@@ -6,7 +6,9 @@
     <div class="col-sm-6 col-lg-5 ms-auto">
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Busca algun producto, orden, proveedor, etc." aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Buscar</button>
+            <button class="btn btn-outline-primary p-1 px-2" type="button">
+                    <i class="bi bi-search"></i>
+            </button>
         </form>
     </div>
     <!-- /.col-->
